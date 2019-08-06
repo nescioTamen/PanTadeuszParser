@@ -10,20 +10,20 @@ import java.util.stream.Stream;
 
 public class Parser {
 
-    public List<Map.Entry<String, Long>> occurrencesByQuantity(String string) {
+    public static List<Map.Entry<String, Long>> occurrencesByQuantity(String string) {
         return getStream(string)
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .limit(5)
                 .collect(Collectors.toList());
     }
 
-    public long theNumberOfWordsThatOccurOnlyOnce(String string) {
+    public static long theNumberOfWordsThatOccurOnlyOnce(String string) {
         return getStream(string)
                 .filter(str -> str.getValue() < 2)
                 .count();
     }
 
-    private Stream<Map.Entry<String, Long>> getStream(String string) {
+    private static Stream<Map.Entry<String, Long>> getStream(String string) {
         return Arrays.stream(string.split(" "))
                 .map(String::toLowerCase)
                 .filter(s -> !s.isEmpty())

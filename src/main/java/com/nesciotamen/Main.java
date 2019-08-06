@@ -13,16 +13,11 @@ public class Main {
         File textFile = new File("src/main/resources/pan-tadeusz.txt");
         String textPanTadeusz = readFile(textFile);
 
-        Parser textParser = new Parser();
-
         System.out.println("Number of occurrences of words sorted by quantity descending: ");
-        List<Map.Entry<String, Long>> occurrencesByQuantity = textParser.occurrencesByQuantity(textPanTadeusz);
+        List<Map.Entry<String, Long>> occurrencesByQuantity = Parser.occurrencesByQuantity(textPanTadeusz);
         occurrencesByQuantity.forEach(linia -> System.out.println(linia.getKey() + " - " + linia.getValue()));
 
         System.out.println("The number of words that occur only once: ");
-        System.out.println(textParser.theNumberOfWordsThatOccurOnlyOnce(textPanTadeusz));
-
+        System.out.println(Parser.theNumberOfWordsThatOccurOnlyOnce(textPanTadeusz));
     }
-
-
 }
