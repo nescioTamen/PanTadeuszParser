@@ -1,10 +1,9 @@
 # Simple console app
-If you want to know the number of words that occur only once or occurrences of words sorted in book Pan Tadeusz, 
-this app is for you.
+If you want to know the number of words that occur only once or number occurrences of words sorted by quantity descending in book Pan Tadeusz, this app is for you.
 
 Btw. you can use your own text file...
 
-## How to play - Running the Project Locally
+## How to run - Running the Project Locally
 
 ### Clone the repository to your local machine:
 
